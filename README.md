@@ -1,19 +1,31 @@
-#Task 1 anagram
+#Task 2 - Unit tests
 
-Write an application that reverses all the words of input text:
+Write JUnit tests for the previous application.
 
-E.g. "abcd efgh" => "dcba hgfe"
+JUnit 5 should be used.
 
-All non-letter symbols should stay on the same places:
+In the future, all tasks are done with the Unit tests
 
-E.g. "a1bcd efg!h" => "d1cba hgf!e"
+1.In order to make tests more useful, name them in the way you read the documentation. For example: reverseOnlyLetters_shouldReturnSameAmountOfSpaces_whenInputStringContainsOnlySpaces. Yes, it is too long and you shouldn't name the src methods in this way. This approach will help you(or somebody) in the future during refactoring or logic change.
 
-Use Latin alphabet for test only.
+2.The pattern is the next: methodName_shouldDoSmth_whenConditions
 
-Hint:
+3.Check null
 
-1. Start with the implementation of a method that reverses only 1 word at a time.
+4.Check empty string
 
-2. (Optional) Add Main (Application) class where you can read console input or hardcode it to check yourself.
+5.Check single space input
 
-3. Add a method that splits the string into words and runs the previous method for each word
+6.Check several spaces input
+
+7.Check single character input
+
+8.Check multiple same letter input
+
+9.Check the same character in lower and upper cases mixed in the input
+
+10.Check a word with different letters
+
+11.Check only symbols
+
+12.check several words.
