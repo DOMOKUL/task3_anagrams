@@ -1,18 +1,22 @@
 package com.company;
 
+import com.google.common.annotations.VisibleForTesting;
+
+import java.util.StringJoiner;
+
 public class Anagram {
 
     public String process(String text) {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringJoiner stringJoiner = new StringJoiner(" ");
         String[] words = text.split(" ");
         for (String word : words) {
-            stringBuilder.append(reverseWordWithoutNotLetters(word));
-            stringBuilder.append(" ");
+            stringJoiner.add(reverseWordWithoutNotLetters(word));
         }
-        return stringBuilder.toString();
+        return stringJoiner.toString();
     }
 
-    public String reverseWordWithoutNotLetters(String word) {
+    @VisibleForTesting
+    String reverseWordWithoutNotLetters(String word) {
         char[] chars = word.toCharArray();
         int leftSide = 0;
         int rightSide = chars.length - 1;
